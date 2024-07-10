@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="head" id="headd">
+            <div class="icon"><a href="
+            "><img src="https://zeevector.com/wp-content/uploads/Amazon-Logo-White@zeevector.png" alt="icon"></a>
+            </div>
+            <div class="address">
+                <div class="add-icon"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
+                <div class="adress-info">
+                    <div class="info-one">Deliver to Rishabh</div>
+                    <div class="info-two">Kolkata 700078</div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="all">All</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Amazon.in" class="text-bar">
+                </div>
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+            </div>
+
+            <div class="location">
+                <div class="loaction-icon"><i class="fa-solid fa-flag"></i></div>
+                <div class="text">EN</div>
+            </div>
+            <div class="person">
+                <div class="name">Hello, Alok</div>
+                <div class="account">Account & Lists</div>
+            </div>
+            <div class="order">
+                <div class="name">Returns</div>
+                <div class="account">& Orders</div>
+            </div>
+            <div class="cart">
+                <div class=""><i class="fa-solid fa-cart-shopping cart-icon"></i></div>
+                <div class="cart-name">Cart</div>
+            </div>
+        </div>
+
+        <div class="head-two">
+            <div class="alll"><i class="fa-solid fa-list"></i><span>All</span></div>
+            <div class="alll"><span>Fresh</span></div>
+            <div class="alll"><span>Amazon miniTV</span></div>
+            <div class="alll"><span>Sell</span></div>
+            <div class="alll"><span>Amazon Pay</span></div>
+            <div class="alll"><span>Everyday Store</span></div>
+            <div class="alll"><span>Gift Cards</span></div>
+            <div class="alll"><span>AmazonBasics</span></div>
+            <div class="alll"><span>Buy Again</span></div>
+            <div class="alll"><span>Browsing History</span></div>
+            <div class="alll"><span>Health, Household & Personal Care</span></div>
+            <div class="alll"><span>Gift Ideas</span></div>
+            <div class="alll"><span>Customer Service</span></div>
+            <div class="alll"><span>Today's Deal</span></div>
+            <div class="alll"><span>Book</span></div>
+            <div class="alll"><span>Alok's Amazon.in</span></div>
+            <div class="alll"><span>Home Improvement</span></div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+
+
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+            <div class="box">
+                <h2>Pick up where you left off</h2>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+                <div class="img-one"><img src="https://m.media-amazon.com/images/I/81aAFpuI1UL._AC_SY110_.jpg" alt="">
+                    <div class="textt">Samsung Galaxy</div>
+                </div>
+
+                <div class="see"><a href="">see more</a></div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="back">
+            <a href="#headd">Back to top</a>
+        </div>
+        <div class="back-one">
+            <div class="onee">
+                <div class="onee-one">
+                    Get to know <br>US
+                </div>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+                
+            </div>
+            <div class="twoo">
+                <div class="onee-one">
+                    Connect with <br>US
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        
+                    </ul>
+                </div>
+            </div>
+                <div class="three">
+                    <div class="onee-one">
+                        Make money with <br>US
+                        <ul>
+                            <li>Sell on Amazon</li>
+                            <li>Sell under Amazon Accelerator</li>
+                            <li>Protect and Build Your Brand</li>
+                            <li>Amazon Global Selling</li>
+                            <li>Become an Affiliate</li>
+                            <li>Fulfilment by Amazon</li>
+                            <li>Advertise Your Products</li>
+                            <li>Amazon Pay on Merchants</li>
+                            
+                        </ul>
+                </div>
+                </div>
+                <div class="four">
+                    <div class="onee-one">
+                        Let Us Help You
+                        <ul>
+                            <li>COVID-19 and Amazon</li>
+                            <li>Your Account</li>
+                            <li>Returns Centre</li>
+                            <li>Recalls and Product Safety Alerts</li>
+                            <li>100% Purchase Protection</li>
+                            <li>Amazon App Download</li>
+                            <li>Help</li>
+                            
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-two">
+          <div class="back-img"></div>
+          <div class="engg">English</div>
+          <div class="engg">India</div>
+        </div>
+        
+    </footer>
+
+
+
+
+</body>
+
+</html>
